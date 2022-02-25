@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Uchen&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 100%;
+}
+
+/*------------------------------------------------------Section 1 Styles------------------------------------------------*/
+
+#contactInfo {
+    padding: 2%;
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "enquiryForm enquiryForm addressBar";
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* FORM STYLES */
+
+.enquiryForm {
+    grid-area: enquiryForm;
+    margin: 3em 2em;
+}
+
+.enquiryForm h1 {
+    font-size: 2.5rem;
+    padding-bottom: 0.5em;
+    color: #03256C;
+}
+
+.enquiryForm p {
+    margin: 1em 0;
+}
+
+.enquiryForm form {
+    margin: 2em auto;
+}
+
+.enquiryForm h3 {
+    margin: 1em 0;
+    color: #03256C;
+}
+
+.enquiryForm div {
+    margin: 1em 0;
+}
+
+.enquiryForm input, select, textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+input[type=text], input[type=tel], input[type=email], select, textarea {
+    width: 70%;
+    margin: 12px;
+    border: 1px solid #03256C;
+    border-radius: 3px;
+    resize: vertical;
+}
+
+.enquiryForm textarea {
+    height: 10em;
+    resize: none;
+    padding: 2%;
+}
+
+.radioContainer {
+    padding: 0.5em 0.5em;
+}
+
+.radioContainer fieldset {
+    border: 1px solid #03256C;
+    padding: 1em;
+    width: 40%;
+}
+
+.radioContainer input {
+    margin: 0 em;
+}
+
+.checkboxContainer {
+    padding: 0.5em 0.5em ;
+}
+
+.submitContainer input {
+    background-color: #03256C;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;  
+    margin: 0 auto; 
+    float: left;
+}
+
+.submitContainer input:hover {
+    background-color: #fff;
+    color: #03256C;
+    font-weight: 500;
+    border: 2px solid black;
+    transition: all 0.5s;
+}
+
+#fname, #fpost, #femail, #ftel, #fservices{
+    padding: 1em;
+}
+
+/* ASIDE ARTICLE  */
+
+.addressBar {
+    grid-area: addressBar;
+    margin: 5em 0;
+}
+
+.addressBar aside {
+    margin: 0 auto;
+    border-radius: 2%;
+    width: 90%;
+    background-color: #e6e6ff;
+    padding: 5%;
+}
+
+.addressBar h4, h5 {
+    font-weight: 900;
+    color: #03256C;
+}
+
+.addressBar div {
+    margin: 2em 0;
+}
+
+.addressBar div h5, address div p {
+    margin: 2%;
+}
+
+.location-wrapper img {
+    padding: 2em 0;
+    max-width: 100%;
+    height: auto;
+}
+
+/*------------------------------------------------------Section 2 Styles------------------------------------------------*/
+
+#locations {
+    padding: 2%;
+    height: auto;
+    width: auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #03256C;}
+
+#locations h2 {
+    padding: 1em;
+}
+
+#locations table {
+    margin: 3% auto;
+}
+
+#locations table th {
+    background-color: #03256C;
+    color: white;
+    padding: 1em;
+}
+#locations table tr:nth-child(even) {
+    background-color: #e6e6ff;
+}
+
+#locations table td {
+    padding: 1.5em 0.5em;
+    font-weight: 600;
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #contactInfo {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.2fr;
+        grid-template-areas: 
+        "enquiryForm"
+        "addressBar";
+    }
+
+    input[type=text], input[type=tel], input[type=email], select, textarea {
+        width: 100%;
+        margin: 20px auto;
+        font-size: 15px;
+    }
+
+    .radioContainer fieldset {
+        width: 100%;
+    }
+
+    form select option {
+        height: 500px;
+    }
+
+    .location-wrapper img {
+        display: none;
+    }
+
+    #table {
+        padding: 50px 0;
+    }
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    #contactInfo{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr;
+        grid-template-areas: 
+        "enquiryForm"
+        "addressBar";
+    }
+    
+    input[type=text], input[type=tel], input[type=email], select, textarea {
+        width: 100%;
+        margin: 20px auto;
+        font-size: 15px;
+    }
+
+    .radioContainer fieldset {
+        width: 100%;
+    }
+
+    .location-wrapper img {
+        display: none;
+    }
+
+    .table-wrapper {
+        padding-bottom: 20px;
+    }
+}

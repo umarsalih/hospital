@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+/* Notes and References 
+
+1) colorhunt.co was used to select a color palette for the website.
+ */
+ 
+
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Uchen&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*------------------------------------------------------Header Styles------------------------------------------------*/
+
+/* NAVIGATION STYLES */
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #03256C;
+    color: white;
+}
+
+#hamburger {
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
+#logo {
+    font-size: large;
+    margin-right: auto;
+}
+
+#logo {
+    font-size: 2em;
+    color: #fff;
+    font-family: 'Uchen', serif;
+}
+
+li, a, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    text-align: right;
+}
+
+.navbar-list {
+    list-style: none;
+}
+
+.list-item {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.list-item a {
+    transition: all 0.3s ease 0s;
+}
+
+.list-item a:hover {
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+}
+
+button {
+    padding: 5px 13px;
+    color: black;
+}
+
+/*------------------------------------------------------Footer Styles------------------------------------------------*/
+
+#footer-home {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "social-media"
+        "gov-logos";
+    height: auto;
+    width: auto;
+    background-color: #E5D549;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.social-media {
+    grid-area: social-media;
+    height: auto;
+}
+
+.social-media h3 {
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 2% 0;
+}
+
+.social-media {
+    margin: 2%;
+    text-align: center;
+    display: block;
+}
+
+.gov-logos {
+    height: auto;
+    grid-area: gov-logos;
+    margin: 2%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    padding: auto;
+}
+
+.bc-logo {
+    width: 30%;
+}
+
+.health-canada-logo {
+    width: 25%;
+}
+
+.unicef-logo {
+    width: 30%;
+}
+
+.sm-logo {
+    margin: 1em 2em;
+    color: black;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    #hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    .navlist-wrapper {
+        padding: 15px 0;
+        display: none;
+    }
+
+    .navlist-wrapper li {
+        margin: 10px;   
+    }
+
+    #toggle:checked + .navlist-wrapper {
+        display: block;
+        transition: display 10s;
+    }
+
+    .navigation #logo {
+        font-size: 25px
+    }
+
+    /* FOOTER */
+
+    #footer-home {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.7fr 1fr;
+    }
+
+    .gov-logos {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .gov-logos img {
+        margin: 30px auto;
+        width: 50%;
+    }
+
+    .social-media-container {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    #hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 35px;
+    }
+
+    .navlist-wrapper {
+        padding: 15px 0;
+        display: none;
+    }
+
+    .navlist-wrapper li {
+        margin: 10px; 
+    }
+
+    #toggle:checked + .navlist-wrapper {
+        display: block;
+        transition: display 10s;
+    }
+
+    .navigation #logo {
+        font-size: 30px
+    }
+}

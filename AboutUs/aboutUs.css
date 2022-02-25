@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Uchen&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 100%;
+}
+/*------------------------------------------------------Section Styles------------------------------------------------*/
+
+#main-body {
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "text-wrapper text-wrapper services-wrapper";
+}
+
+/* TEXT CONTENT */
+
+.text-wrapper {
+   margin: auto 5%;
+   grid-area: text-wrapper;
+   width: auto;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.text-wrapper h1{
+    color: #03256C;
+}
+
+.text-wrapper p {
+    text-align: justify;
+    line-height: 2rem;
+}
+
+.text-wrapper h1 {
+    font-size: 2.5rem;
+}
+
+.text-wrapper h2 {
+    font-size: 1.5rem;
+    color: #2541B2;
+}
+
+.services-wrapper {
+    margin: 3% 0;
+    grid-area: services-wrapper;
+    width: auto;
+}
+
+.services-wrapper a {
+    color: black;
+}
+
+.about-us-heading {
+    margin: 2em 0;
+    margin-left: 0;
+}
+
+.about-us-subheading {
+    margin: 2em 0;
+    margin-left: 0;
+}
+
+.about-us-p {
+    margin: 2em 0;
+    margin-left: 0;
+}
+
+/* IMAGES */
+
+.about-images {
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "abt_img1 abt_img2"
+        "abt_img3 abt_img3";
+}
+
+.about-images img {
+    max-width: 100%;
+    height: auto;
+    margin: 8%;
+    border-radius: 20px;
+    filter: drop-shadow(5px 10px 4px grey);
+}
+
+#about_img1 {
+    width: 80%;
+}
+
+#about_img2 {
+    width: 90%;
+}
+
+#about_img3 {
+    display: block;
+    margin: 1rem auto;
+    width: 30%;
+}
+
+.abt_img1 {
+    grid-area: abt_img1;
+}
+
+.abt_img2 {
+    grid-area: abt_img2;
+}
+
+.abt_img3 {
+    grid-area: abt_img3;
+}   
+
+/* ASIDE CONTENT (SERVIES WRAPPER*/
+
+.services-wrapper {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    width: auto;
+    margin: 10% auto;
+    padding: 4%;
+}
+
+.services-wrapper aside {
+    margin: 8% 0;
+}
+
+.services-wrapper h3 {
+    font-size: 1.5em;
+    margin: 7% 0;
+    color: #2541B2;
+}
+
+.services-wrapper ul li {
+    width: 90%;
+    border-radius: 12px;
+    list-style: none;
+    margin: 7% auto;
+    padding: 5% 5%;
+    color: white;
+    background-color: #2541B2;
+}
+
+.services-wrapper ul a :hover {
+    border-style: solid;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    transition: all 0.5s;
+}
+
+/*------------------------------------------------------YT Video Section Styles------------------------------------------------*/
+ 
+/* To obtain a responsive embeded video layout, I made reference to W3 Schools and used aspect ratios */
+
+#youtube-video {
+    height: auto;
+    width: auto;
+}
+
+#youtube-video h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #2541B2;
+    margin-top: 3em;
+    text-align: center;
+}
+
+div.video-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+div.video-wrapper h3 {
+    bottom: 20%;
+}
+
+#youtube-video iframe {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 70%;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #main-body {
+        height: auto;
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        /* grid-template-rows: 1fr auto; */
+        grid-template-areas: 
+            "text-wrapper"
+            "services-wrapper";
+    }
+
+    .about-images {
+        height: auto;
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "abt_img1"
+            "abt_img2"
+            "abt_img3";
+    }    
+
+    #about_img3 {
+        display: block;
+        margin: 1rem auto;
+        width: 80%;
+    }
+
+    #youtube-video h3 {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    
+}
+

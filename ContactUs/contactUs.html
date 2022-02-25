@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="contactStyles.css">
+    <link rel="stylesheet" href="../Header-Footer-Styles.css">
+
+    <script src="https://kit.fontawesome.com/13d4b666a1.js" crossorigin="anonymous"></script>
+
+    <script src="table.js" defer></script>
+    <script src="validation.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <p id="logo">St.Mary's Hospital for Children</p>
+            <nav class="navbar">
+                <label id="hamburger" for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle">
+                <div class="navlist-wrapper">
+                    <ul class="navbar-list">
+                        <li class="list-item"><a href="../Homepage/home.html">Home</a></li>
+                        <li class="list-item"><a href="../AboutUs/aboutUs.html">About Us</a></li>
+                        <li class="list-item"><a href="../ContactUs/contactUs.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contactInfo">
+
+        <!-- A contact form with 8 fields-->
+        <div class="enquiryForm">
+
+            <h1>Contact Us</h1>
+
+            <p>You can get in touch with us in a number of ways. Please look through the options below. </p>
+
+            <form action="" method="get" class="form1" onsubmit="submissionHandler(); return false">
+                <!--Direct reference to the textbook was made for forms-->
+
+                <h3>Enquire Now</h3>
+
+                <div class="nameContainer">
+                    <input type="text" name="fname" id="fname" placeholder="Full Name">
+                </div>
+
+                <div class="emailContainer">
+                    <input type="email" name="femail" id="femail" placeholder="Email Address" required>
+                </div>
+
+                <div class="phoneContainer">
+                    <input type="tel" name="ftel" id="ftel" placeholder="Phone" required>
+                </div>
+
+                <div class="postInfoContainer">
+                    <input type="text" name="fpost" id="fpost" placeholder="Postal Address">
+                </div>
+
+                <div class="servicesContainer">
+                    <select name="fservices" id="fservices">
+                        <option value="Select service..." selected="selected">Select service</option>
+                        <option value="s1">Paediatrician Conulstation</option>
+                        <option value="">Childhood Vaccinations</option>
+                        <option value="">Emergency Services</option>
+                        <option value="">Cancer Unit</option>
+                        <option value="">Nutrition and Dieting</option>
+                        <option value="">Speech Pathology</option>
+                        <option value="">Mental Health</option>
+                        <option value="">Disabled Care</option>
+                    </select>
+                </div>
+
+                <div class="commentContainer">
+                    <textarea name="fcomment" id="fcomment" placeholder="Comments"></textarea>
+                </div>
+
+                <div class="radioContainer">
+                    <p>I would like to be contacted: </p>
+
+                    <fieldset>
+                        <input type="radio" name="contactBy" id="rPhone" value="rPhone">
+                        <label for="rPhone">By Phone</label>
+                        <input type="radio" name="contactBy" id="rEmail" value="rEmail">
+                        <label for="rEmail">By Email</label>
+                    </fieldset>
+                </div>
+
+                <div class="checkboxContainer">
+                    <input type="checkbox" name="fMagazine" id="fMagazine" value="yes">
+                    <label for="fMagazine">I would like to receive emails about upcoming events and fundraisers</label>
+                </div>
+
+                <div class="submitContainer">
+                    <input type="submit" value="Submit">
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- An aside bar that showcases basic contact information such as phone, fax and email.-->
+        <div class="addressBar">
+            <aside>
+                <h4> | Contact information</h4>
+
+                <div class="hospitalPhone">
+                    <h5>Phone: </h5>
+                    <p>+1 604-875-2345</p>
+                </div>
+
+                <div class="hospitalFax">
+                    <h5>Fax: </h5>
+                    <p>+1 604-875-2445</p>
+                </div>
+
+                <div class="hospitalEmail">
+                    <h5>Email: </h5>
+                    <p>stmaryenquiries@cw.bc.ca</p>
+                </div>
+
+                <div class="hospitalAddress">
+                    <h5>Street Address</h5>
+                    <p>4500 Oak St, Vancouver, BC V6H 3N1, Canada</p>
+                </div>
+            </aside>
+
+            <div class="location-wrapper">
+                <img src="location.png" alt="location">
+            </div>
+        </div>
+    </section>
+
+    <!-- A table generated using JavaScript containing contact numbers of each unit-->
+    <section id="locations">
+        <div style="overflow-x:auto;" class="table-wrapper">
+            <!--Made reference to W3 schools on making tables more responsive-->
+            <h2>Contact the unit directly by phone to get more information</h2>
+            <div id="table">
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer-home">
+
+        <div class="social-media">
+            <h3>Encouraging our children to live healthy.</h3>
+            <a href="#"><i class="fab fa-instagram ig-logo sm-logo fa-2x"></i></a>
+            <a href="#"><i class="fab fa-facebook fb-logo sm-logo fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube yt-logo sm-logo fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter twt-logo sm-logo fa-2x"></i></a>
+        </div>
+
+        <div class="gov-logos">
+            <img class="bc-logo footer-logo" src="../Homepage/bc-logo.png" alt="logo-of-bc">
+            <img class="health-canada-logo footer-logo" src="../Homepage\flag.png" alt="health-canada">
+            <img class="unicef-logo footer-logo" src="../Homepage/unicef.png" alt="unicef-logo">
+        </div>
+    </footer>
+</body>
+
+</html>
